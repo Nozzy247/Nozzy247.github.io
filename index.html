@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>DeFlock — Newport News, VA</title>
+<meta name="description" content="A local chapter of likeminded citizens working together to remove AI-powered dragnet surveillance from our community.">
+<meta name="theme-color" content="#161826">
+<link rel="canonical" href="https://deflocknewportnews.org/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DeFlock Newport News">
+<meta property="og:title" content="DeFlock — Newport News, VA">
+<meta property="og:description" content="A local chapter of likeminded citizens working together to remove AI-powered dragnet surveillance from our community.">
+<meta property="og:url" content="https://deflocknewportnews.org/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23161826'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%239184d9'/%3E%3C/svg%3E">
+
+<!-- Source design: https://claude.ai/design/p/114dafb9-10ea-44be-9de1-eb68532511df
+     Nocturne design system tokens live in the stylesheet below; take colors,
+     type, spacing and radii from its variables rather than hard-coding values. -->
+
+<!-- styles.css opens with an @import for Inter; preconnecting lets the font
+     handshake overlap that serialized stylesheet fetch. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="_ds/nocturne-47f2b33f-b981-4115-b02e-c2dc90613841/styles.css">
+
+<style>
+  html, body { margin: 0; background: var(--color-bg); }
+  a { color: var(--color-accent-300); text-decoration: none; }
+  a:hover { color: var(--color-accent); }
+  @keyframes noct-sweep { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+  @keyframes noct-hazard { 0% { background-position: 0 0; } 100% { background-position: 56px 0; } }
+
+  /* The hazard stripes and the sweep loop forever. Honor a reduced-motion
+     request rather than running three infinite animations for the life of
+     the page; the banner still reads correctly frozen. */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div style="min-height: 100vh; background: radial-gradient(1200px 700px at 12% -10%, var(--color-accent-900), transparent 70%), var(--color-bg); color: var(--color-text); font-family: var(--font-body); display: grid; grid-template-rows: auto 1fr auto; padding: var(--space-6) var(--space-8); box-sizing: border-box;">
+
+  <header style="display: flex; align-items: center; gap: var(--space-3); font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-neutral-400);">
+    <span aria-hidden="true" style="width: 26px; height: 1px; background: var(--color-accent);"></span>
+    <span>DeFlock</span>
+  </header>
+
+  <main style="display: flex; flex-direction: column; justify-content: center; gap: var(--space-6); max-width: 900px;">
+    <h1 style="font-family: var(--font-heading); font-weight: 500; font-size: clamp(40px, 7vw, 88px); line-height: 1.02; letter-spacing: -0.02em; margin: 0; text-wrap: pretty;">
+      DeFlock<br>
+      <span style="color: var(--color-neutral-400);">Newport News, VA</span>
+    </h1>
+
+    <div style="display: flex; flex-direction: column; gap: var(--space-4); max-width: 720px;">
+      <div style="display: flex; flex-direction: column; border: 1px solid #b98f16; border-radius: var(--radius-md); overflow: hidden; background: color-mix(in oklch, #f2c218 8%, var(--color-bg));">
+        <div aria-hidden="true" style="height: 14px; background-image: repeating-linear-gradient(135deg, #f2c218 0 14px, #1b1c22 14px 28px); animation: noct-hazard 2.4s linear infinite;"></div>
+        <div style="position: relative; overflow: hidden; padding: var(--space-4) var(--space-6); display: flex; align-items: center; gap: var(--space-4);">
+          <span aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: #f2c218; box-shadow: 0 0 0 4px color-mix(in oklch, #f2c218 20%, transparent); flex: none;"></span>
+          <span style="font-family: var(--font-heading); font-weight: 500; font-size: clamp(20px, 3.6vw, 40px); line-height: 1; letter-spacing: 0.14em; text-transform: uppercase; color: #f2c218;">Under Construction</span>
+          <span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(105deg, transparent 40%, color-mix(in oklch, #f2c218 16%, transparent) 50%, transparent 60%); animation: noct-sweep 3.6s ease-in-out infinite;"></span>
+        </div>
+        <div aria-hidden="true" style="height: 14px; background-image: repeating-linear-gradient(135deg, #f2c218 0 14px, #1b1c22 14px 28px); animation: noct-hazard 2.4s linear infinite reverse;"></div>
+      </div>
+      <p style="margin: 0; color: var(--color-neutral-400); font-size: 15px; line-height: 1.6; max-width: 44ch;">A local chapter of likeminded citizens working together to remove AI-powered dragnet surveillance from our community.</p>
+    </div>
+  </main>
+
+  <footer style="display: flex; justify-content: space-between; align-items: end; gap: var(--space-4); font-size: 12px; color: var(--color-neutral-500); letter-spacing: 0.08em;">
+    <span>37.0871° N, 76.4730° W</span>
+    <span>Check back soon</span>
+  </footer>
+</div>
+
+</body>
+</html>
